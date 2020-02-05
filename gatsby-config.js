@@ -1,3 +1,5 @@
+require("ts-node").register({ files: true });
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,6 +17,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
