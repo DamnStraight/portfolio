@@ -1,7 +1,7 @@
 import React from "react";
 
-import LandingSection from "../components/LandingSection";
-import Projects from "../components/Projects";
+import LandingSection from "../views/LandingSection";
+import Projects from "../views/Projects";
 import Layout from "../components/layout";
 
 const IndexPage = () => (

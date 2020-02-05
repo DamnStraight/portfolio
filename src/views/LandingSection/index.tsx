@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Mobile from "../device/Mobile";
 
 import styles from "./LandingSection.module.scss";
 
@@ -21,7 +20,7 @@ const LandingSection: React.FC = () => {
           <p
             id="name"
             className={`font-bold text-5xl md:text-9xl leading-tight mb-0 ${styles.defaultState} text-shadow-lg`}
-          >{`Steven`}</p>
+          >{`Steven Labelle`}</p>
           <p className="text-2xl leading-normal mb-0 text-shadow-lg">
             I'm a Software Engineer.
           </p>
