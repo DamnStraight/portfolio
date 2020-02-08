@@ -12,7 +12,9 @@
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-postcss": "^2.1.20",
+    "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-typescript": "^2.1.27",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^4.4.2",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1",
     "tailwindcss": "^1.1.4",
     "ts-node": "^8.6.2"
@@ -44,7 +47,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy:github": "npm run build && node ./scripts/deploy-github"
   },
   "repository": {
     "type": "git",

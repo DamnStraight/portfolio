@@ -69,3 +69,7 @@
 html {
   font-family: 'Roboto';
 }
+
+ul {
+  list-style: disc;
+}
