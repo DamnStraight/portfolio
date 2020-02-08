@@ -4,11 +4,11 @@ import ProjectTemplate from "../../../types/ProjectTemplate";
 
 const projectDetails: ProjectTemplate = {
   title: "ShuttleControl",
-  description: "Full-Stack and React Native developer at ShuttleControl.",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   detailedDescription: "",
   notableTasks: [
-    "Completely refactored web and react-native application to typescript",
-    "Refactored react-native application from class components to hooks",
+    "Completely refactored web and react-native codebase to Typescript",
+    "Complete re-write of react-native codebase from class components to hooks",
   ],
   techStack: [
     "React",

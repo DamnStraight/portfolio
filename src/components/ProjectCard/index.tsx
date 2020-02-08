@@ -5,12 +5,12 @@ import TechPill, { TechStack } from "../TechPill";
 
 // <CardDiv /> =================================================== //
 const CardDiv = styled.div`
-  ${tw`max-w-full bg-white overflow-hidden rounded-lg shadow-xl`}
+  ${tw`max-w-full flex bg-white overflow-hidden rounded-lg shadow-xl`}
   transition: transform 0.1s linear;
   &:hover {
     transform: scale(1.05);
   }
-  min-height: 400px;
+  min-height: 500px;
 `;
 
 // <UnderlineTitle /> =================================================== //
@@ -44,14 +44,22 @@ const ProjectCard: React.FC<Props> = ({
   stack,
   notableTasks = [],
 }) => {
+  const isNotableTasksEmpty = notableTasks.length == 0;
+
   return (
     <CardDiv>
-      <div>
-        <div className="px-6 py-4">
-          <UnderlineTitle subtitle={false}>{title}</UnderlineTitle>
-          <p className="mt-2 text-base mb-4 text-gray-700">{description}</p>
+      {/* <div> */}
+      <div className="px-6 py-4 flex flex-col flex-grow">
+        <UnderlineTitle subtitle={false}>{title}</UnderlineTitle>
+        <p
+          className={`${
+            isNotableTasksEmpty ? "flex-grow" : ""
+          } mt-2 text-base mb-4 text-gray-700`}
+        >
+          {description}
+        </p>
 
-          {/* <div className="flex flex-wrap">
+        {/* <div className="flex flex-wrap">
             <div className="px-2 mb-4">
               <CardImage />
             </div>
@@ -66,25 +74,29 @@ const ProjectCard: React.FC<Props> = ({
             </div>
           </div> */}
 
-          {notableTasks.length != 0 && (
-            <>
-              <UnderlineTitle subtitle>Notable Tasks</UnderlineTitle>
-              <div className="mb-4">
-                <ul className="list-inside text-sm">
-                  {notableTasks.map(entry => (
-                    <li>{entry}</li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          )}
+        {notableTasks.length != 0 && (
+          <div className={`${isNotableTasksEmpty ? "" : "flex-grow"}`}>
+            <UnderlineTitle subtitle>Notable Tasks</UnderlineTitle>
+            <div className="mb-4">
+              <ul className="list-inside text-sm">
+                {notableTasks.map(entry => (
+                  <li>{entry}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
 
+        <div className="flex flex-col justify-end">
           <UnderlineTitle subtitle>Tech Stack</UnderlineTitle>
-          {stack.map(entry => (
-            <TechPill icon={entry} />
-          ))}
+          <span className="flex-none">
+            {stack.map(entry => (
+              <TechPill icon={entry} />
+            ))}
+          </span>
         </div>
       </div>
+      {/* </div> */}
     </CardDiv>
   );
 };

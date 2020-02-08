@@ -47,7 +47,7 @@ const LandingSection: React.FC = () => {
                 className={`font-bold text-6xl md:text-7xl lg:text-9xl leading-tight mb-0 ${styles.defaultState} text-shadow-lg text-center`}
               >{`Steven Labelle`}</p>
               <p className="text-4xl leading-normal mb-0 text-shadow-lg text-center lg:text-right">
-                Software Engineer & Full Stack Developer
+                a Software Engineer & Full Stack Developer
               </p>
             </div>
 {/* 
@@ -69,7 +69,7 @@ const LandingSection: React.FC = () => {
                 </div>
               </div>
             </div> */}
-            <div className="w-3/4 sm:w-2/3 md:w-3/4 lg:w-1/3">
+            {/* <div className="w-3/4 sm:w-2/3 md:w-3/4 lg:w-1/3">
               <div className="w-full min-h-full bg-white rounded-lg shadow-xl p-6">
                 <Img className="w-24 h-24 mx-auto rounded-full mb-6" fluid={data.placeholderImage.childImageSharp.fluid}  />
                 <p></p>
@@ -79,7 +79,7 @@ const LandingSection: React.FC = () => {
                     exercitationem praesentium nihil.
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
