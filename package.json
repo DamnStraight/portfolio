@@ -25,6 +25,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "smooth-scroll": "^16.1.2",
     "styled-components": "^5.0.1",
     "tailwind.macro": "^1.0.0-alpha.10",
     "typescript": "^3.7.5"

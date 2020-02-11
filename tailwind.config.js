@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
+      montserrat: ["Montserrat", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
     },
     fontSize: {
@@ -18,6 +19,8 @@ module.exports = {
       "7xl": "5rem",
       "8xl": "6rem",
       "9xl": "7rem",
+      "xxl": "10rem",
+      "xxxl": "12rem",
     },
   },
 };

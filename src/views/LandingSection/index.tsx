@@ -1,9 +1,22 @@
-import React, { useEffect } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { graphql, useStaticQuery } from "gatsby";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import tw from "tailwind.macro";
 
 import styles from "./LandingSection.module.scss";
-import Modal from "../../components/Modal";
+
+
+const LandingSectionWrapper = styled.div`
+  ${tw`h-full pt-12 pb-12 flex flex-col items-center justify-center`}
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+`;
 
 const LandingSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -31,11 +44,8 @@ const LandingSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="h-full sm:h-screen">
-      {/* <Modal /> */}
-      <div
-        className={`h-full pt-12 pb-12 ${styles.bgGradient} flex flex-col items-center justify-center`}
-      >
+    <section id="landing" className="h-screen">
+      <LandingSectionWrapper>
         <div className="container mx-auto font-roboto text-white text-center md:text-left">
           <div className="flex flex-col items-center">
             <div className="w-3/4 mb-16">
@@ -50,7 +60,7 @@ const LandingSection: React.FC = () => {
                 a Software Engineer & Full Stack Developer
               </p>
             </div>
-{/* 
+            {/* 
             <div className="w-full xl:w-1/3 max-w-sm w-full lg:max-w-full lg:flex pl-6">
               <BackgroundImage
                 className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
@@ -80,10 +90,9 @@ const LandingSection: React.FC = () => {
                 </div>
               </div>
             </div> */}
-
           </div>
         </div>
-      </div>
+      </LandingSectionWrapper>
     </section>
   );
 };

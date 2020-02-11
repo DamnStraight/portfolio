@@ -1,3 +1,4 @@
+import React from "react";
 import { TechStack } from "../components/TechPill";
 
 export default interface ProjectTemplate {
@@ -7,4 +8,5 @@ export default interface ProjectTemplate {
   notableTasks: string[],
   techStack: TechStack[];
   images?: string[]; 
+  repoUrl: string;
 }

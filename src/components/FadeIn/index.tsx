@@ -9,6 +9,7 @@ const FadeInWrapper = styled.div<StyledDivProps>`
   transition: transform 0.6s, opacity 0.6s ease-out;
   transform: translateY(${props => (props.visible ? "0px" : "-10%")});
   opacity: ${props => (props.visible ? "1" : "0")};
+  height: 100%;
 `;
 
 type Props = {
